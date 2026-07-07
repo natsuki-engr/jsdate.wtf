@@ -1,6 +1,6 @@
 # rawQuestions
 
-Extracted from `/home/runner/work/jsdate.wtf/jsdate.wtf/index.html`.
+Extracted from `index.html`.
 
 ## Question 1
 
@@ -323,7 +323,7 @@ new Date("maybe 1")
 
 ### Explanation
 
-"may" in "maybe" is parsed as the month May! And for some reason this expression cares about your local timezone, which happens to be BST for me right now.
+"may" in "maybe" is parsed as the month May! The exact output depends on the local timezone used when the date is evaluated.
 
 ## Question 20
 
@@ -340,7 +340,7 @@ new Date("fourth of may 2010")
 
 ### Explanation
 
-"fourth of" is ignored, this is just parsing "may 2010" and again local timezone is important.
+"fourth of" is ignored, this is just parsing "may 2010", and the exact output depends on the local timezone used when the date is evaluated.
 
 ## Question 21
 
@@ -477,4 +477,3 @@ new Date(-[])
 ### Explanation
 
 I couldn't resist. -[] is coerced to 0, which is interpreted as milliseconds since the Unix epoch (Jan 1, 1970).
-
